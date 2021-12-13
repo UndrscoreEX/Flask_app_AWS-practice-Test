@@ -1,11 +1,12 @@
 from flask import Flask, render_template, redirect, flash,request, url_for
 import pandas as pd
 from flask_bootstrap import Bootstrap
-# import openpyxl
+# from openpyxl import load_workbook
 
 app = Flask(__name__)
 Bootstrap(app)
-data = pd.read_excel('static/AWS_exam.xlsx',engine='openpyxl')
+# data = load_workbook(filename= 'static/AWS_exam.xlsx')
+data = pd.read_excel('static/AWS_exam.xls')
 df = pd.DataFrame(data,columns=['Question', "Answer Option 1", "Answer Option 2", "Answer Option 3", "Answer Option 4","Correct Response"])
 app.secret_key = 'adsfdsafasd'
 answers = 0
