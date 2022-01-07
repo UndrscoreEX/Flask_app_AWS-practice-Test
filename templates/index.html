@@ -2,10 +2,13 @@
 
 
 {% block body %}
-<container class="row justify-content-md-center pt-5">
-<h1 class="">Start AWS test:</h1>
-</container>
-<container class="row justify-content-md-center">
-<p><a class="btn btn-outline-secondary" href="{{ url_for('start', ques=1) }}">start now</a></p>
-</container>
+<div class="container">
+
+    <div class="d-flex justify-content-center ">
+        <h1 class="pt-5">Start AWS test:</h1>
+    </div>
+</div>
+<div class="container d-flex justify-content-center">
+<span><a class="btn btn-outline-secondary" href="{{ url_for('start', ques=1) }}">start now</a></span>
+</div>
 {% endblock %}
