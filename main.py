@@ -1,6 +1,8 @@
 from flask import Flask, render_template, redirect, flash, request, url_for
 import pandas as pd
 from flask_bootstrap import Bootstrap
+from decouple import config
+import os
 # from openpyxl import load_workbook
 
 app = Flask(__name__)
@@ -12,7 +14,11 @@ data = pd.read_excel('static/AWS_exam.xls')
 
 # data-frame of the excel sheet
 df = pd.DataFrame(data,columns=['Question', "Answer Option 1", "Answer Option 2", "Answer Option 3", "Answer Option 4","Correct Response"])
-app.secret_key = 'adsfdsafasd'
+
+# ++++ Set ENV varaiable when hosting on server. Don't keep it open like this ++++++
+os.environ['SECRET_KEY'] = 'adsfdsafasd'
+app.secret_key = os.getenv('SECRET_KEY')
+
 answers = 0
 
 # starting landing-page
