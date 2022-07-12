@@ -1,9 +1,7 @@
 from flask import Flask, render_template, redirect, flash, request, url_for
 import pandas as pd
 from flask_bootstrap import Bootstrap
-# from decouple import config
 import os
-# from openpyxl import load_workbook
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -42,6 +40,7 @@ def summary(count):
 @app.route('/question/<int:ques>', methods=['POST','GET'])
 def start(ques):
     global answers
+    print('answer so far is: ',answers)
 
     # if an answer has been sent (i.e this is second question or more)
     if request.method == "POST":
