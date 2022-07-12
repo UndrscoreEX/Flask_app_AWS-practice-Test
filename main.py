@@ -1,10 +1,7 @@
 from flask import Flask, render_template, redirect, flash, request, url_for
 import pandas as pd
 from flask_bootstrap import Bootstrap
-<<<<<<< HEAD
 # from decouple import config
-=======
->>>>>>> de94a38eca5d7d87ef58f98ba68e351736a97ea5
 import os
 # from openpyxl import load_workbook
 
