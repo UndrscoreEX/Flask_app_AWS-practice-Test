@@ -17,12 +17,12 @@
 <div class="row justify-content-md-center">
 <hr class="col-md-6 px-2">
 </div>
-<form action="{{url_for('start',ques= num+1)}}" method="POST">
+<form action="{{url_for('start',ques= num+1)}}" method="POST" >
 {% for i,a in options.items(): %}
 
-        <container class="row justify-content-md-center justify-content-sm-center  pt-2">
+        <container class="row justify-content-md-center justify-content-sm-center  pt-2 ">
         <span class=" col-md-6 col-sm-10 col-xs-6">   {{i}}: {{a}}</span>
-        <input class="col-md-1 col-sm-2 col-xs-6" name={{i}} type="checkbox">
+        <input class="col-md-1 col-sm-2 col-xs-6" name={{i}} style='max-width:27px' type="checkbox">
         </container>
 
 {% endfor %}

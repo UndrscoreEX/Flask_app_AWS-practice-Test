@@ -28,7 +28,7 @@ db.session.commit()
 # data = load_workbook(filename= 'static/AWS_exam.xlsx')
 
 # open sheet
-data = pd.read_excel('static/AWS_exam.xls')
+data = pd.read_excel('static/AWS_exam.xls') 
 
 # data-frame of the excel sheet
 df = pd.DataFrame(data,columns=['Question', "Answer Option 1", "Answer Option 2", "Answer Option 3", "Answer Option 4","Correct Response"])
