@@ -19,7 +19,9 @@ class Score(db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
+app.app_context().push()
 db.create_all()
+
 
 score = Score(score=0)
 db.session.add(score)

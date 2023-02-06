@@ -21,8 +21,8 @@
 {% for i,a in options.items(): %}
 
         <container class="row justify-content-md-center justify-content-sm-center  pt-2 ">
-        <span class=" col-md-6 col-sm-10 col-xs-6">   {{i}}: {{a}}</span>
-        <input class="col-md-1 col-sm-2 col-xs-6" name={{i}} style='max-width:27px' type="checkbox">
+        <label class=" col-md-6 col-sm-10 col-xs-6" for='{{i}}'>   {{i}}: {{a}}</label>
+        <input class="col-md-1 col-sm-2 col-xs-6" name={{i}} style='max-width:27px' type="checkbox" id='{{i}}'>
         </container>
 
 {% endfor %}
